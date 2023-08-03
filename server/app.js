@@ -30,6 +30,10 @@ app.use(createPost)
 app.use(user);
 app.use(cookieParser());
 
+app.get('/healthz',(req,res)=>{
+    res.send('this is working fine');
+})
+
 app.use(async (req,res,next)=>{
     const {user_id} = req.cookies;
     if(user_id){
