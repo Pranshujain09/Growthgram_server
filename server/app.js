@@ -7,12 +7,13 @@ const port = 5000;
 const cookieParser = require("cookie-parser");
 const User=require('./model/User');
 const Post=require("./model/posts")
+require('dotenv').config();
 
 const auth = require("./routes/auth");
 const user = require("./routes/user");
 const createPost = require("./routes/createpost");
 mongoose.set("strictQuery",true);
-mongoose.connect('mongodb://localhost:27017/InstaDatabase')
+mongoose.connect(process.env.Mongo_URL)
 .then(()=>{
     console.log("DB connected");
 })
