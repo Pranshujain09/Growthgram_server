@@ -60,7 +60,7 @@ router.post("/create-session", async (req, res) => {
       return res.send({localstore,user:{userid,name, email } });
       //   res.redirect("/chat");
     } else {
-      return res.send({error:"error u have to first signup"});
+      return res.send({error:"error you have to first signup"});
     }
   } catch (err) {
     return res.send("error");

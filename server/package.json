@@ -17,7 +17,7 @@
     
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./app.js",
-    "build" : "npm i"
+    "build" : "npm build"
   },
   "author": "",
   "license": "ISC",
